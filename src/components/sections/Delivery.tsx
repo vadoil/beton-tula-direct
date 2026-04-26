@@ -20,29 +20,29 @@ export const Delivery = () => (
         description="Согласовываем окно поставки, контролируем выезд миксеров и манипуляторов, работаем по частным и коммерческим адресам без выходных."
       />
 
-      <div className="mt-12 grid gap-3 lg:grid-cols-5">
+      <div className="mt-12 grid grid-cols-2 gap-3 lg:grid-cols-5">
         {STEPS.map((s, i) => (
-          <div key={s.title} className="relative rounded-lg border border-border bg-background p-6 shadow-card">
-            <span className="absolute -top-3 left-6 rounded-sm bg-primary px-2.5 py-1 text-xs font-extrabold tabular-nums text-primary-foreground">
+          <div key={s.title} className="relative rounded-lg border border-border bg-background p-4 sm:p-6 shadow-card">
+            <span className="absolute -top-3 left-4 sm:left-6 rounded-sm bg-primary px-2.5 py-1 text-xs font-extrabold tabular-nums text-primary-foreground">
               ШАГ {i + 1}
             </span>
-            <s.icon className="h-7 w-7 text-accent" />
-            <h3 className="mt-4 text-lg font-bold">{s.title}</h3>
-            <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed">{s.text}</p>
+            <s.icon className="h-6 w-6 sm:h-7 sm:w-7 text-accent" />
+            <h3 className="mt-3 sm:mt-4 text-base sm:text-lg font-bold">{s.title}</h3>
+            <p className="mt-1 sm:mt-1.5 text-xs sm:text-sm text-muted-foreground leading-relaxed">{s.text}</p>
           </div>
         ))}
       </div>
 
-      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
         {[
           { t: "По Туле и области", d: "Доставка в любой район Тулы и по всей Тульской области." },
           { t: "Согласование времени", d: "Привозим в назначенное окно — без простоев бригады." },
           { t: "Частным и коммерческим", d: "Работаем с физлицами, бригадами и крупными подрядчиками." },
           { t: "Оперативная отгрузка", d: "Готовы отгрузить в день обращения при наличии слотов." },
         ].map((b) => (
-          <div key={b.t} className="rounded-lg bg-surface p-5">
-            <h4 className="font-bold">{b.t}</h4>
-            <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{b.d}</p>
+          <div key={b.t} className="rounded-lg bg-surface p-4 sm:p-5">
+            <h4 className="text-sm sm:text-base font-bold leading-tight">{b.t}</h4>
+            <p className="mt-1 text-xs sm:text-sm text-muted-foreground leading-relaxed">{b.d}</p>
           </div>
         ))}
       </div>

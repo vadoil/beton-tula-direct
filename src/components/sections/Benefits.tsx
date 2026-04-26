@@ -20,14 +20,14 @@ export const Benefits = () => (
         title="Сильный поставщик бетона и ЖБИ для строителей Тулы"
         description="Производим, доставляем и контролируем качество сами — поэтому отвечаем за каждый куб и каждое изделие, которое уезжает к вам на объект."
       />
-      <div className="mt-12 grid gap-px overflow-hidden rounded-lg bg-border sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-lg bg-border lg:grid-cols-4">
         {ITEMS.map((it) => (
-          <div key={it.title} className="bg-background p-6 transition-colors hover:bg-surface">
-            <span className="grid h-12 w-12 place-items-center rounded-sm bg-primary text-accent">
-              <it.icon className="h-5 w-5" />
+          <div key={it.title} className="bg-background p-4 sm:p-6 transition-colors hover:bg-surface">
+            <span className="grid h-10 w-10 sm:h-12 sm:w-12 place-items-center rounded-sm bg-primary text-accent">
+              <it.icon className="h-4 w-4 sm:h-5 sm:w-5" />
             </span>
-            <h3 className="mt-5 text-lg font-bold leading-tight">{it.title}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{it.text}</p>
+            <h3 className="mt-3 sm:mt-5 text-sm sm:text-lg font-bold leading-tight">{it.title}</h3>
+            <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm leading-relaxed text-muted-foreground">{it.text}</p>
           </div>
         ))}
       </div>
