@@ -1,6 +1,6 @@
 import { SectionHeading } from "@/components/site/SectionHeading";
-import { QuoteForm } from "@/components/site/QuoteForm";
-import { Clock, Phone, ShieldCheck } from "lucide-react";
+import { QuizForm } from "@/components/site/QuizForm";
+import { Clock, Phone, ShieldCheck, ListChecks } from "lucide-react";
 
 export const Calculator = () => (
   <section id="calculator" className="py-20 lg:py-28">
@@ -9,10 +9,17 @@ export const Calculator = () => (
         <div>
           <SectionHeading
             label="Расчёт стоимости"
-            title="Заполните заявку — посчитаем точную цену с доставкой"
-            description="Опишите задачу или просто оставьте телефон. Перезвоним за 15 минут, подберём марку и согласуем удобное время доставки."
+            title="Пройдите квиз — посчитаем точную цену с доставкой"
+            description="Ответьте на 5–7 коротких вопросов. Перезвоним за 15 минут, подберём марку или ЖБИ и согласуем удобное время доставки."
           />
           <ul className="mt-8 space-y-4">
+            <li className="flex gap-3">
+              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-sm bg-accent text-accent-foreground"><ListChecks className="h-5 w-5" /></span>
+              <div>
+                <h4 className="font-bold">5–7 вопросов</h4>
+                <p className="text-sm text-muted-foreground">Минимум полей — менеджер сам уточнит детали по телефону.</p>
+              </div>
+            </li>
             <li className="flex gap-3">
               <span className="grid h-10 w-10 shrink-0 place-items-center rounded-sm bg-accent text-accent-foreground"><Clock className="h-5 w-5" /></span>
               <div>
@@ -39,9 +46,7 @@ export const Calculator = () => (
           </ul>
         </div>
 
-        <div className="rounded-lg border border-border bg-background p-6 shadow-card lg:p-8">
-          <QuoteForm variant="full" />
-        </div>
+        <QuizForm />
       </div>
     </div>
   </section>
