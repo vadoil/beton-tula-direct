@@ -1,21 +1,32 @@
 import zhbiImg from "@/assets/zhbi-blocks.jpg";
+import imgFbs from "@/assets/zhbi/fbs.jpg";
+import imgPlity from "@/assets/zhbi/plity.jpg";
+import imgPeremychki from "@/assets/zhbi/peremychki.jpg";
+import imgKoltsa from "@/assets/zhbi/koltsa.jpg";
+import imgKryshki from "@/assets/zhbi/kryshki.jpg";
+import imgDorozhnye from "@/assets/zhbi/dorozhnye.jpg";
+import imgLotki from "@/assets/zhbi/lotki.jpg";
+import imgSvai from "@/assets/zhbi/svai.jpg";
+import imgBordury from "@/assets/zhbi/bordury.jpg";
+import imgOpory from "@/assets/zhbi/opory.jpg";
+import imgFundament from "@/assets/zhbi/fundament.jpg";
+import imgProchie from "@/assets/zhbi/prochie.jpg";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/site/SectionHeading";
-import { Box, Layers3, Minus, CircleDashed, Disc, Square, Waves, Anchor, Construction, Component, Hexagon, Wrench } from "lucide-react";
 
 const ITEMS = [
-  { icon: Box, title: "ФБС блоки", desc: "Стеновые блоки для ленточных фундаментов и подвалов." },
-  { icon: Layers3, title: "Плиты перекрытия", desc: "Пустотные ПК и сплошные плиты для перекрытий любых этажей." },
-  { icon: Minus, title: "Перемычки", desc: "Брусковые и плитные перемычки для оконных и дверных проёмов." },
-  { icon: CircleDashed, title: "Кольца колодезные", desc: "КС для канализационных, водопроводных и инженерных колодцев." },
-  { icon: Disc, title: "Крышки и днища", desc: "Плиты перекрытия и днища колодцев — комплектом или отдельно." },
-  { icon: Square, title: "Дорожные плиты", desc: "ПДН, ПАГ и 1П — для временных и постоянных дорог, площадок." },
-  { icon: Waves, title: "Лотки", desc: "Водоотводные и теплотрассные лотки разных типоразмеров." },
-  { icon: Anchor, title: "Сваи", desc: "Забивные железобетонные сваи под фундаменты любых нагрузок." },
-  { icon: Construction, title: "Бордюры", desc: "Дорожные и тротуарные бордюрные камни всех профилей." },
-  { icon: Component, title: "Опорные элементы", desc: "Опоры, башмаки, оголовки и подколонники для конструкций." },
-  { icon: Hexagon, title: "Фундаментные элементы", desc: "Подушки ФЛ, стаканы, элементы под индивидуальный проект." },
-  { icon: Wrench, title: "Прочие ЖБИ", desc: "Нестандартные изделия, ливнёвка, парапеты и комплектующие." },
+  { img: imgFbs, title: "ФБС блоки", desc: "Стеновые блоки для ленточных фундаментов и подвалов." },
+  { img: imgPlity, title: "Плиты перекрытия", desc: "Пустотные ПК и сплошные плиты для перекрытий любых этажей." },
+  { img: imgPeremychki, title: "Перемычки", desc: "Брусковые и плитные перемычки для оконных и дверных проёмов." },
+  { img: imgKoltsa, title: "Кольца колодезные", desc: "КС для канализационных, водопроводных и инженерных колодцев." },
+  { img: imgKryshki, title: "Крышки и днища", desc: "Плиты перекрытия и днища колодцев — комплектом или отдельно." },
+  { img: imgDorozhnye, title: "Дорожные плиты", desc: "ПДН, ПАГ и 1П — для временных и постоянных дорог, площадок." },
+  { img: imgLotki, title: "Лотки", desc: "Водоотводные и теплотрассные лотки разных типоразмеров." },
+  { img: imgSvai, title: "Сваи", desc: "Забивные железобетонные сваи под фундаменты любых нагрузок." },
+  { img: imgBordury, title: "Бордюры", desc: "Дорожные и тротуарные бордюрные камни всех профилей." },
+  { img: imgOpory, title: "Опорные элементы", desc: "Опоры, башмаки, оголовки и подколонники для конструкций." },
+  { img: imgFundament, title: "Фундаментные элементы", desc: "Подушки ФЛ, стаканы, элементы под индивидуальный проект." },
+  { img: imgProchie, title: "Прочие ЖБИ", desc: "Нестандартные изделия, ливнёвка, парапеты и комплектующие." },
 ];
 
 export const ZhbiCatalog = () => (
@@ -32,25 +43,32 @@ export const ZhbiCatalog = () => (
         description="ФБС, плиты, кольца, перемычки, дорожные плиты, лотки и сваи — в наличии и под заказ. Поможем подобрать типоразмер и доставим манипулятором на объект."
       />
 
-      <div className="mt-12 grid gap-px overflow-hidden rounded-lg bg-white/10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {ITEMS.map((it) => (
-          <article key={it.title} className="group bg-primary p-6 transition-colors hover:bg-primary-soft">
-            <div className="flex items-start gap-4">
-              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-sm bg-accent/15 text-accent border border-accent/30">
-                <it.icon className="h-5 w-5" />
-              </span>
-              <div>
-                <h3 className="text-base font-bold leading-tight">{it.title}</h3>
-                <p className="mt-1.5 text-sm text-white/65 leading-relaxed">{it.desc}</p>
-              </div>
+          <article key={it.title}
+            className="group flex flex-col overflow-hidden rounded-lg bg-primary-soft/60 border border-white/10 transition-all hover:-translate-y-0.5 hover:border-accent/50">
+            <div className="relative aspect-[4/3] overflow-hidden bg-primary-soft">
+              <img
+                src={it.img}
+                alt={it.title}
+                loading="lazy"
+                width={800}
+                height={600}
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent" />
             </div>
-            <div className="mt-5 grid grid-cols-2 gap-2">
-              <Button variant="ctaOutline" size="sm" asChild className="border-white/25 text-white hover:bg-white hover:text-primary">
-                <a href="#calculator">Запросить цену</a>
-              </Button>
-              <Button variant="cta" size="sm" asChild>
-                <a href="#calculator">Оставить заявку</a>
-              </Button>
+            <div className="flex flex-1 flex-col p-5">
+              <h3 className="text-base font-bold leading-tight">{it.title}</h3>
+              <p className="mt-1.5 text-sm text-white/65 leading-relaxed flex-1">{it.desc}</p>
+              <div className="mt-4 grid grid-cols-2 gap-2">
+                <Button variant="ctaOutline" size="sm" asChild className="border-white/25 text-white hover:bg-white hover:text-primary">
+                  <a href="#calculator">Цена</a>
+                </Button>
+                <Button variant="cta" size="sm" asChild>
+                  <a href="#calculator">Заявка</a>
+                </Button>
+              </div>
             </div>
           </article>
         ))}
