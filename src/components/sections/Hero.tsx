@@ -15,12 +15,12 @@ export const Hero = () => (
     <img
       src={heroImg}
       alt="Бетоновоз заливает свежий бетон на строительном объекте в Туле"
-      className="absolute inset-0 h-full w-full object-cover opacity-40"
+      className="absolute inset-0 h-full w-full object-cover opacity-90"
       width={1920}
       height={1280}
     />
-    <div className="absolute inset-0 bg-overlay-gradient" />
-    <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent" />
+    <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/70 to-primary/20" />
+    <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/40" />
 
     <div className="container-tight relative z-10 grid gap-12 py-16 lg:grid-cols-[1.2fr_1fr] lg:gap-16 lg:py-24">
       <div>
