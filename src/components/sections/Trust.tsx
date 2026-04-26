@@ -19,14 +19,14 @@ export const Trust = () => (
         title="Работаем так, чтобы к нам возвращались"
         description="Главные принципы — качество материала, честный объём и соблюдение сроков. Это то, за что нас выбирают строители Тулы."
       />
-      <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
         {ITEMS.map((it) => (
-          <div key={it.title} className="rounded-lg bg-background p-6 shadow-card">
-            <span className="grid h-11 w-11 place-items-center rounded-sm bg-accent/10 text-accent">
-              <it.icon className="h-5 w-5" />
+          <div key={it.title} className="rounded-lg bg-background p-4 sm:p-6 shadow-card">
+            <span className="grid h-10 w-10 sm:h-11 sm:w-11 place-items-center rounded-sm bg-accent/10 text-accent">
+              <it.icon className="h-4 w-4 sm:h-5 sm:w-5" />
             </span>
-            <h3 className="mt-4 text-base font-bold">{it.title}</h3>
-            <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{it.text}</p>
+            <h3 className="mt-3 sm:mt-4 text-sm sm:text-base font-bold leading-tight">{it.title}</h3>
+            <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm text-muted-foreground leading-relaxed">{it.text}</p>
           </div>
         ))}
       </div>
