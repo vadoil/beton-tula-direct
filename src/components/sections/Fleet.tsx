@@ -25,19 +25,19 @@ export const Fleet = () => (
           Не зависим от подрядчиков по логистике. Сами планируем рейсы, контролируем выезды и держим резервные машины — поэтому доставляем бетон и ЖБИ точно в окно поставки.
         </p>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+        <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4">
           {SPECS.map((s) => (
-            <div key={s.t} className="rounded-lg border border-white/15 bg-white/5 p-5">
-              <div className="flex items-center gap-3">
-                <span className="grid h-10 w-10 place-items-center rounded-sm bg-accent text-accent-foreground">
-                  <s.icon className="h-5 w-5" />
+            <div key={s.t} className="rounded-lg border border-white/15 bg-white/5 p-4 sm:p-5">
+              <div className="flex items-center gap-2.5 sm:gap-3">
+                <span className="grid h-9 w-9 sm:h-10 sm:w-10 place-items-center rounded-sm bg-accent text-accent-foreground shrink-0">
+                  <s.icon className="h-4 w-4 sm:h-5 sm:w-5" />
                 </span>
                 <div>
-                  <div className="text-2xl font-extrabold tabular-nums leading-none">{s.n}</div>
-                  <div className="text-xs uppercase tracking-wider text-white/60 mt-1">{s.t}</div>
+                  <div className="text-xl sm:text-2xl font-extrabold tabular-nums leading-none">{s.n}</div>
+                  <div className="text-[10px] sm:text-xs uppercase tracking-wider text-white/60 mt-1">{s.t}</div>
                 </div>
               </div>
-              <p className="mt-3 text-sm text-white/70 leading-relaxed">{s.d}</p>
+              <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm text-white/70 leading-relaxed">{s.d}</p>
             </div>
           ))}
         </div>
