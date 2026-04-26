@@ -13,6 +13,7 @@ import { Calculator } from "@/components/sections/Calculator";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Footer } from "@/components/sections/Footer";
+import { ChatWidget } from "@/components/site/ChatWidget";
 
 const Index = () => {
   const ld = {
@@ -45,6 +46,7 @@ const Index = () => {
       </main>
       <Footer />
       <MobileStickyBar />
+      <ChatWidget />
     </div>
   );
 };
