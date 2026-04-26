@@ -1,6 +1,7 @@
 import textureImg from "@/assets/concrete-texture.jpg";
 import { QuoteForm } from "@/components/site/QuoteForm";
 import { Phone, Clock } from "lucide-react";
+import { MessengerLinks } from "@/components/site/MessengerLinks";
 
 export const FinalCta = () => (
   <section className="relative overflow-hidden bg-primary text-white py-20 lg:py-28">
@@ -33,6 +34,11 @@ export const FinalCta = () => (
               <div className="text-xs text-white/60">пн–сб с 8:00 до 20:00</div>
             </div>
           </a>
+        </div>
+
+        <div className="mt-6">
+          <div className="text-xs uppercase tracking-wider text-white/60 mb-3">Или напишите в мессенджер</div>
+          <MessengerLinks variant="pill" />
         </div>
       </div>
 
