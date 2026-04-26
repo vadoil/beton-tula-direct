@@ -1,6 +1,7 @@
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { Button } from "@/components/ui/button";
 import { PhoneCall, ClipboardList, Calculator, CalendarCheck, Truck } from "lucide-react";
+import roadSlabs from "@/assets/road-slabs.jpg";
 
 const STEPS = [
   { icon: PhoneCall, title: "Заявка", text: "Звонок или форма на сайте — фиксируем задачу." },
@@ -44,6 +45,22 @@ export const Delivery = () => (
             <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{b.d}</p>
           </div>
         ))}
+      </div>
+
+      <div className="mt-10 overflow-hidden rounded-lg border border-border">
+        <div className="relative aspect-[21/9]">
+          <img src={roadSlabs} alt="Доставка дорожных плит и ЖБИ манипулятором по Тульской области"
+            loading="lazy" width={1280} height={896}
+            className="absolute inset-0 h-full w-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/40 to-transparent" />
+          <div className="relative z-10 flex h-full max-w-2xl flex-col justify-end gap-2 p-6 text-white sm:p-10">
+            <span className="section-label">География доставки</span>
+            <h3 className="heading-md text-white text-balance">
+              Тула, Алексин, Щёкино, Новомосковск, Узловая, Ясногорск, Богородицк
+            </h3>
+            <p className="text-sm text-white/80 max-w-lg">Привозим бетон миксерами, ЖБИ — манипуляторами с разгрузкой прямо на площадке.</p>
+          </div>
+        </div>
       </div>
 
       <div className="mt-10 flex flex-col items-start gap-3 rounded-lg bg-primary p-6 text-white sm:flex-row sm:items-center sm:justify-between">

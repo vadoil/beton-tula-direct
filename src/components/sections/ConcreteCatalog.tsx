@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { ArrowRight, Check } from "lucide-react";
+import concretePour from "@/assets/concrete-pour.jpg";
 
 const GRADES = ["М100", "М150", "М200", "М250", "М300", "М350", "М400", "М450", "М500", "М600"];
 
@@ -23,12 +24,26 @@ export const ConcreteCatalog = () => {
   return (
     <section id="concrete" className="py-20 lg:py-28">
       <div className="container-tight">
+        <div className="mb-12 grid gap-6 overflow-hidden rounded-lg border border-border bg-surface lg:grid-cols-[1.1fr_1fr]">
+          <div className="relative aspect-[4/3] lg:aspect-auto">
+            <img src={concretePour} alt="Заливка свежего бетона из миксера на объекте в Туле"
+              loading="lazy" width={1280} height={896}
+              className="absolute inset-0 h-full w-full object-cover" />
+            <div className="absolute left-4 top-4 rounded-sm bg-primary px-3 py-1.5 text-xs font-extrabold uppercase tracking-wider text-primary-foreground">
+              Свежий замес · доставка от 1 м³
+            </div>
+          </div>
+          <div className="flex flex-col justify-center p-6 lg:p-10">
+            <SectionHeading
+              label="Каталог бетона"
+              title="Бетон всех марок в Туле — под любую задачу и объём"
+              description="Производим товарный бетон, раствор и пескобетон. Подскажем марку под ваш объект, привезём в нужное время и в нужном объёме."
+            />
+          </div>
+        </div>
+
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-          <SectionHeading
-            label="Каталог бетона"
-            title="Бетон всех марок в Туле — под любую задачу и объём"
-            description="Производим товарный бетон, раствор и пескобетон. Подскажем марку под ваш объект, привезём в нужное время и в нужном объёме."
-          />
+          <h3 className="text-xl font-bold">Выберите марку или категорию</h3>
         </div>
 
         <div className="mt-8 flex flex-wrap gap-2">

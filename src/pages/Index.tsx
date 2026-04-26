@@ -7,6 +7,8 @@ import { ZhbiCatalog } from "@/components/sections/ZhbiCatalog";
 import { MaterialSelector } from "@/components/sections/MaterialSelector";
 import { Delivery } from "@/components/sections/Delivery";
 import { Trust } from "@/components/sections/Trust";
+import { Fleet } from "@/components/sections/Fleet";
+import { Cases } from "@/components/sections/Cases";
 import { Calculator } from "@/components/sections/Calculator";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
@@ -34,7 +36,9 @@ const Index = () => {
         <ZhbiCatalog />
         <MaterialSelector />
         <Delivery />
+        <Fleet />
         <Trust />
+        <Cases />
         <Calculator />
         <Faq />
         <FinalCta />
