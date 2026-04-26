@@ -1,4 +1,4 @@
-import zhbiImg from "@/assets/zhbi-yard.jpg";
+import zhbiImg from "@/assets/zhbi-blocks.jpg";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { Box, Layers3, Minus, CircleDashed, Disc, Square, Waves, Anchor, Construction, Component, Hexagon, Wrench } from "lucide-react";
