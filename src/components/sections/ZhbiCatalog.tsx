@@ -43,7 +43,7 @@ export const ZhbiCatalog = () => (
         description="ФБС, плиты, кольца, перемычки, дорожные плиты, лотки и сваи — в наличии и под заказ. Поможем подобрать типоразмер и доставим манипулятором на объект."
       />
 
-      <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4">
         {ITEMS.map((it) => (
           <article key={it.title}
             className="group flex flex-col overflow-hidden rounded-lg bg-primary-soft/60 border border-white/10 transition-all hover:-translate-y-0.5 hover:border-accent/50">
@@ -58,10 +58,10 @@ export const ZhbiCatalog = () => (
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent" />
             </div>
-            <div className="flex flex-1 flex-col p-5">
-              <h3 className="text-base font-bold leading-tight">{it.title}</h3>
-              <p className="mt-1.5 text-sm text-white/65 leading-relaxed flex-1">{it.desc}</p>
-              <div className="mt-4 grid grid-cols-2 gap-2">
+            <div className="flex flex-1 flex-col p-3 sm:p-5">
+              <h3 className="text-sm sm:text-base font-bold leading-tight">{it.title}</h3>
+              <p className="mt-1 sm:mt-1.5 text-xs sm:text-sm text-white/65 leading-relaxed flex-1">{it.desc}</p>
+              <div className="mt-3 sm:mt-4 grid grid-cols-2 gap-1.5 sm:gap-2">
                 <Button variant="ctaOutline" size="sm" asChild className="border-white/25 text-white hover:bg-white hover:text-primary">
                   <a href="#calculator">Цена</a>
                 </Button>
