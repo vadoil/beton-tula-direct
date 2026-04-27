@@ -56,9 +56,6 @@ export const Header = () => {
               <span className="hidden sm:inline">+7 910 160 03 33</span>
             </span>
           </a>
-          <div className="flex md:hidden">
-            <MessengerLinks variant="icon" />
-          </div>
           <Button variant="cta" size="default" asChild className="hidden sm:inline-flex">
             <a href="#calculator">Заказать звонок</a>
           </Button>

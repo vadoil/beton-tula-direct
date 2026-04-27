@@ -1,4 +1,4 @@
-import { Send } from "lucide-react";
+import maxIconImg from "@/assets/max-icon.png";
 
 // Подставьте свои реальные ссылки
 export const TELEGRAM_URL = "https://t.me/tulbeton";
@@ -13,9 +13,7 @@ const TelegramIcon = ({ className = "h-4 w-4" }: { className?: string }) => (
 );
 
 const MaxIcon = ({ className = "h-4 w-4" }: { className?: string }) => (
-  <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden>
-    <path d="M3 4h3.2l3 5.5L12.2 4h2.8L11 11l4 7h-3.2L8.5 12.5 5.5 18H2.7l4.6-7L3 4zm15 0h3v14h-3V4z"/>
-  </svg>
+  <img src={maxIconImg} alt="" className={className} aria-hidden />
 );
 
 export const MessengerLinks = ({ variant = "icon" }: { variant?: Variant }) => {
