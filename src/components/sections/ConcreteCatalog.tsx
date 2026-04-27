@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/site/SectionHeading";
-import { ArrowRight, Check } from "lucide-react";
+import { OrderDialog } from "@/components/site/OrderDialog";
+import { ArrowRight, Check, Calculator } from "lucide-react";
 import concretePour from "@/assets/concrete-pour.jpg";
 
 const GRADES = ["М100", "М150", "М200", "М250", "М300", "М350", "М400", "М450", "М500", "М600"];
@@ -83,11 +84,16 @@ export const ConcreteCatalog = () => {
                 ))}
               </div>
               <div className="mt-6 flex flex-col gap-2 pt-4 border-t border-border">
-                <Button variant="cta" size="default" asChild>
-                  <a href="#calculator">Заказать с доставкой <ArrowRight className="h-4 w-4" /></a>
-                </Button>
+                <OrderDialog
+                  product={p.title}
+                  trigger={
+                    <Button variant="cta" size="default">
+                      Заказать с доставкой <ArrowRight className="h-4 w-4" />
+                    </Button>
+                  }
+                />
                 <Button variant="outline" size="default" asChild>
-                  <a href="#calculator">Узнать цену</a>
+                  <a href="#calculator"><Calculator className="h-4 w-4" /> Рассчитать весь объект</a>
                 </Button>
               </div>
             </article>

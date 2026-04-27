@@ -13,6 +13,8 @@ import imgFundament from "@/assets/zhbi/fundament.jpg";
 import imgProchie from "@/assets/zhbi/prochie.jpg";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/site/SectionHeading";
+import { OrderDialog } from "@/components/site/OrderDialog";
+import { Calculator } from "lucide-react";
 
 const ITEMS = [
   { img: imgFbs, title: "ФБС блоки", desc: "Стеновые блоки для ленточных фундаментов и подвалов." },
@@ -63,11 +65,14 @@ export const ZhbiCatalog = () => (
               <p className="mt-1 sm:mt-1.5 text-xs sm:text-sm text-white/65 leading-relaxed flex-1">{it.desc}</p>
               <div className="mt-3 sm:mt-4 grid grid-cols-2 gap-1.5 sm:gap-2">
                 <Button variant="ctaOutline" size="sm" asChild className="border-white/25 text-white hover:bg-white hover:text-primary">
-                  <a href="#calculator">Цена</a>
+                  <a href="#calculator"><Calculator className="h-3.5 w-3.5" /> Рассчитать</a>
                 </Button>
-                <Button variant="cta" size="sm" asChild>
-                  <a href="#calculator">Заявка</a>
-                </Button>
+                <OrderDialog
+                  product={it.title}
+                  trigger={
+                    <Button variant="cta" size="sm">Заказать</Button>
+                  }
+                />
               </div>
             </div>
           </article>
