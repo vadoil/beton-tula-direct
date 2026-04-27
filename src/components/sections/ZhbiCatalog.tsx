@@ -63,14 +63,21 @@ export const ZhbiCatalog = () => (
             <div className="flex flex-1 flex-col p-3 sm:p-5">
               <h3 className="text-sm sm:text-base font-bold leading-tight">{it.title}</h3>
               <p className="mt-1 sm:mt-1.5 text-xs sm:text-sm text-white/65 leading-relaxed flex-1">{it.desc}</p>
-              <div className="mt-3 sm:mt-4 grid grid-cols-2 gap-1.5 sm:gap-2">
-                <Button variant="ctaOutline" size="sm" asChild className="border-white/25 text-white hover:bg-white hover:text-primary">
-                  <a href="#calculator"><Calculator className="h-3.5 w-3.5" /> Рассчитать</a>
+              <div className="mt-3 sm:mt-4 flex gap-1.5 sm:gap-2">
+                <Button
+                  variant="ctaOutline"
+                  size="sm"
+                  asChild
+                  aria-label="Рассчитать весь объект"
+                  title="Рассчитать весь объект"
+                  className="border-white/25 text-white hover:bg-white hover:text-primary shrink-0 w-9 px-0"
+                >
+                  <a href="#calculator"><Calculator className="h-4 w-4" /></a>
                 </Button>
                 <OrderDialog
                   product={it.title}
                   trigger={
-                    <Button variant="cta" size="sm">Заказать</Button>
+                    <Button variant="cta" size="sm" className="flex-1">Заказать</Button>
                   }
                 />
               </div>
