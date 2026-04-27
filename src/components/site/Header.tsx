@@ -46,9 +46,9 @@ export const Header = () => {
           <div className="hidden md:flex">
             <MessengerLinks variant="icon" />
           </div>
-          <a href="tel:+74872000000" className="hidden md:flex items-center gap-2 font-bold text-foreground hover:text-accent transition-colors">
+          <a href="tel:+79101600333" className="hidden md:flex items-center gap-2 font-bold text-foreground hover:text-accent transition-colors">
             <Phone className="h-4 w-4 text-accent" />
-            <span className="tabular-nums">+7 (4872) 00-00-00</span>
+            <span className="tabular-nums">+7 910 160 03 33</span>
           </a>
           <Button variant="cta" size="default" asChild className="hidden sm:inline-flex">
             <a href="#calculator">Заказать звонок</a>
@@ -76,8 +76,8 @@ export const Header = () => {
                 {n.label}
               </a>
             ))}
-            <a href="tel:+74872000000" className="rounded-md px-3 py-3 text-base font-bold text-accent">
-              +7 (4872) 00-00-00
+            <a href="tel:+79101600333" className="rounded-md px-3 py-3 text-base font-bold text-accent">
+              +7 910 160 03 33
             </a>
             <div className="px-1 pt-2 pb-1">
               <MessengerLinks variant="row" />
