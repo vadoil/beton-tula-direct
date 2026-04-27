@@ -27,10 +27,10 @@ export const FinalCta = () => (
               <div className="text-xs text-white/60">в рабочие часы</div>
             </div>
           </div>
-          <a href="tel:+74872000000" className="flex items-center gap-3 rounded-lg border border-white/15 bg-white/5 p-4 hover:bg-white/10 transition-colors">
+          <a href="tel:+79101600333" className="flex items-center gap-3 rounded-lg border border-white/15 bg-white/5 p-4 hover:bg-white/10 transition-colors">
             <Phone className="h-6 w-6 text-accent" />
             <div>
-              <div className="font-bold tabular-nums">+7 (4872) 00-00-00</div>
+              <div className="font-bold tabular-nums">+7 910 160 03 33</div>
               <div className="text-xs text-white/60">пн–сб с 8:00 до 20:00</div>
             </div>
           </a>

@@ -52,7 +52,7 @@ export const Footer = () => (
         <ul className="mt-4 space-y-3 text-sm">
           <li className="flex gap-3">
             <Phone className="h-4 w-4 text-accent mt-1 shrink-0" />
-            <a href="tel:+74872000000" className="font-bold text-white tabular-nums hover:text-accent">+7 (4872) 00-00-00</a>
+            <a href="tel:+79101600333" className="font-bold text-white tabular-nums hover:text-accent">+7 910 160 03 33</a>
           </li>
           <li className="flex gap-3">
             <Mail className="h-4 w-4 text-accent mt-1 shrink-0" />
