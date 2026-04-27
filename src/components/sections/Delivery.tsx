@@ -48,11 +48,11 @@ export const Delivery = () => (
       </div>
 
       <div className="mt-10 overflow-hidden rounded-lg border border-border">
-        <div className="relative aspect-[21/9]">
+        <div className="relative aspect-square sm:aspect-[21/9]">
           <img src={roadSlabs} alt="Доставка дорожных плит и ЖБИ манипулятором по Тульской области"
             loading="lazy" width={1280} height={896}
             className="absolute inset-0 h-full w-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/60 to-primary/20 sm:bg-gradient-to-r sm:from-primary/85 sm:via-primary/40 sm:to-transparent" />
           <div className="relative z-10 flex h-full max-w-2xl flex-col justify-end gap-2 p-6 text-white sm:p-10">
             <span className="section-label">География доставки</span>
             <h3 className="heading-md text-white text-balance">
