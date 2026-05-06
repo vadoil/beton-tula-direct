@@ -26,7 +26,7 @@ export const Hero = () => (
       <div>
         <span className="section-label">Производство и доставка · Тула</span>
         <h1 className="heading-xl mt-5 text-balance text-white">
-          Бетон с доставкой по Туле и области —{" "}
+          Бетон с доставкой по Туле и области –{" "}
           <span className="text-accent">точно в срок</span>
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">

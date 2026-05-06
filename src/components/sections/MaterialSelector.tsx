@@ -4,12 +4,12 @@ import { Home, Footprints, LayoutPanelTop, Building, Layers, Map, Pipette, Arrow
 
 const TASKS = [
   { icon: Home, title: "Для фундамента", text: "Ленточные, плитные, свайно-ростверковые. Подберём марку М250–М350." },
-  { icon: Footprints, title: "Для отмостки", text: "М200–М250 с морозостойкостью F150 — служит десятки лет." },
+  { icon: Footprints, title: "Для отмостки", text: "М200–М250 с морозостойкостью F150 – служит десятки лет." },
   { icon: LayoutPanelTop, title: "Для стяжки", text: "Пескобетон М150–М300 под жилые и коммерческие помещения." },
   { icon: Building, title: "Для монолита", text: "М300–М500 для стен, колонн и ответственных конструкций." },
   { icon: Layers, title: "Для перекрытий", text: "Плиты ПК и монолитный бетон М300–М400 с подачей насосом." },
   { icon: Map, title: "Для дорожных работ", text: "М350–М450 + плиты ПДН/ПАГ для площадок и подъездов." },
-  { icon: Pipette, title: "Для колодцев и инженерки", text: "Кольца КС, крышки, днища, лотки — с доставкой и монтажом." },
+  { icon: Pipette, title: "Для колодцев и инженерки", text: "Кольца КС, крышки, днища, лотки – с доставкой и монтажом." },
 ];
 
 export const MaterialSelector = () => (
@@ -18,7 +18,7 @@ export const MaterialSelector = () => (
       <SectionHeading
         label="Подбор материала"
         title="Что заливаете? Подскажем, какой бетон или ЖБИ нужен"
-        description="Выберите задачу — расскажем, какая марка подойдёт, в каком объёме считать и какие изделия нужны в комплект."
+        description="Выберите задачу – расскажем, какая марка подойдёт, в каком объёме считать и какие изделия нужны в комплект."
       />
 
       <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3 xl:grid-cols-4">
@@ -40,7 +40,7 @@ export const MaterialSelector = () => (
           <div>
             <h3 className="text-lg font-extrabold">Не знаете, что выбрать?</h3>
             <p className="mt-2 text-sm text-white/70 leading-relaxed">
-              Опишите задачу — подберём бетон или ЖБИ под ваш объект и посчитаем с доставкой.
+              Опишите задачу – подберём бетон или ЖБИ под ваш объект и посчитаем с доставкой.
             </p>
           </div>
           <Button variant="cta" size="lg" asChild className="mt-5 w-full">

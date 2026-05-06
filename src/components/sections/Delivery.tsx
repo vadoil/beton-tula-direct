@@ -4,7 +4,7 @@ import { PhoneCall, ClipboardList, Calculator, CalendarCheck, Truck } from "luci
 import roadSlabs from "@/assets/road-slabs.jpg";
 
 const STEPS = [
-  { icon: PhoneCall, title: "Заявка", text: "Звонок или форма на сайте — фиксируем задачу." },
+  { icon: PhoneCall, title: "Заявка", text: "Звонок или форма на сайте – фиксируем задачу." },
   { icon: ClipboardList, title: "Уточнение", text: "Уточняем марку, объём, особенности объекта." },
   { icon: Calculator, title: "Расчёт", text: "Считаем стоимость с доставкой за 15 минут." },
   { icon: CalendarCheck, title: "Согласование", text: "Согласовываем дату, время и окно поставки." },
@@ -16,7 +16,7 @@ export const Delivery = () => (
     <div className="container-tight">
       <SectionHeading
         label="Доставка"
-        title="Доставка бетона и ЖБИ по Туле и области — без срыва графика"
+        title="Доставка бетона и ЖБИ по Туле и области – без срыва графика"
         description="Согласовываем окно поставки, контролируем выезд миксеров и манипуляторов, работаем по частным и коммерческим адресам без выходных."
       />
 
@@ -36,7 +36,7 @@ export const Delivery = () => (
       <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
         {[
           { t: "По Туле и области", d: "Доставка в любой район Тулы и по всей Тульской области." },
-          { t: "Согласование времени", d: "Привозим в назначенное окно — без простоев бригады." },
+          { t: "Согласование времени", d: "Привозим в назначенное окно – без простоев бригады." },
           { t: "Частным и коммерческим", d: "Работаем с физлицами, бригадами и крупными подрядчиками." },
           { t: "Оперативная отгрузка", d: "Готовы отгрузить в день обращения при наличии слотов." },
         ].map((b) => (
@@ -58,13 +58,13 @@ export const Delivery = () => (
             <h3 className="heading-md text-white text-balance">
               Тула, Алексин, Щёкино, Новомосковск, Узловая, Ясногорск, Богородицк
             </h3>
-            <p className="text-sm text-white/80 max-w-lg">Привозим бетон миксерами, ЖБИ — манипуляторами с разгрузкой прямо на площадке.</p>
+            <p className="text-sm text-white/80 max-w-lg">Привозим бетон миксерами, ЖБИ – манипуляторами с разгрузкой прямо на площадке.</p>
           </div>
         </div>
       </div>
 
       <div className="mt-10 flex flex-col items-start gap-3 rounded-lg bg-primary p-6 text-white sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-white/85"><strong className="text-white">Нужна доставка сегодня?</strong> Позвоните — проверим слоты и посчитаем стоимость.</p>
+        <p className="text-white/85"><strong className="text-white">Нужна доставка сегодня?</strong> Позвоните – проверим слоты и посчитаем стоимость.</p>
         <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
           <Button variant="cta" size="lg" asChild><a href="#calculator">Оставить заявку</a></Button>
           <Button variant="onDark" size="lg" asChild><a href="tel:+77777777777">Позвонить</a></Button>

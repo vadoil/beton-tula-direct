@@ -19,10 +19,10 @@ export const Fleet = () => (
       <div>
         <span className="section-label">Свой автопарк</span>
         <h2 className="heading-lg mt-5 text-white text-balance">
-          Своя техника — <span className="text-accent">своя ответственность</span> за сроки
+          Своя техника – <span className="text-accent">своя ответственность</span> за сроки
         </h2>
         <p className="mt-5 text-lg text-white/75 leading-relaxed">
-          Не зависим от подрядчиков по логистике. Сами планируем рейсы, контролируем выезды и держим резервные машины — поэтому доставляем бетон и ЖБИ точно в окно поставки.
+          Не зависим от подрядчиков по логистике. Сами планируем рейсы, контролируем выезды и держим резервные машины – поэтому доставляем бетон и ЖБИ точно в окно поставки.
         </p>
 
         <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4">

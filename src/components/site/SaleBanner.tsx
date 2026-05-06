@@ -59,11 +59,11 @@ export const SaleBanner = () => {
 
   return (
     <>
-      {/* Постоянно видимая «бирка» — продаётся */}
+      {/* Постоянно видимая «бирка» – продаётся */}
       <button
         type="button"
         onClick={() => setOpen(true)}
-        aria-label="Сайт продаётся — открыть"
+        aria-label="Сайт продаётся – открыть"
         className="fixed left-3 bottom-24 lg:left-5 lg:bottom-5 z-[55] group inline-flex items-center gap-2 rounded-full bg-accent text-accent-foreground pl-3 pr-4 py-2 text-xs font-extrabold uppercase tracking-wider shadow-accent hover:scale-105 transition-transform"
       >
         <span className="relative flex h-2.5 w-2.5">
@@ -84,7 +84,7 @@ export const SaleBanner = () => {
             Этот сайт продаётся
           </DialogTitle>
           <DialogDescription className="text-base">
-            Готовый лендинг для бетонного бизнеса в Туле — с каталогом, калькулятором, формами и AI-консультантом. Оставьте заявку или свяжитесь напрямую.
+            Готовый лендинг для бетонного бизнеса в Туле – с каталогом, калькулятором, формами и AI-консультантом. Оставьте заявку или свяжитесь напрямую.
           </DialogDescription>
         </DialogHeader>
 
@@ -125,7 +125,7 @@ export const SaleBanner = () => {
         </div>
 
         <form onSubmit={handleSubmit(onSubmit)} className="grid gap-3 mt-4 pt-4 border-t border-border">
-          <div className="text-sm font-semibold">Или оставьте заявку — я перезвоню</div>
+          <div className="text-sm font-semibold">Или оставьте заявку – я перезвоню</div>
           <div className="grid gap-3 sm:grid-cols-2">
             <div>
               <Label>Имя</Label>

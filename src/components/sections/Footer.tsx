@@ -64,7 +64,7 @@ export const Footer = () => (
           </li>
           <li className="flex gap-3">
             <Clock className="h-4 w-4 text-accent mt-1 shrink-0" />
-            <span className="text-white/80">пн–сб: 8:00 — 20:00<br />вс: по заявке</span>
+            <span className="text-white/80">пн–сб: 8:00 – 20:00<br />вс: по заявке</span>
           </li>
         </ul>
       </div>
