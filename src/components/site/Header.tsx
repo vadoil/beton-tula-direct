@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Phone, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { MessengerLinks } from "@/components/site/MessengerLinks";
+import logoTB from "@/assets/logo-tb.png";
 
 const NAV = [
   { href: "#concrete", label: "Бетон" },
@@ -27,7 +28,13 @@ export const Header = () => {
     <header className={`sticky top-0 z-50 transition-all ${scrolled ? "bg-background/95 backdrop-blur border-b border-border" : "bg-background"}`}>
       <div className="container-tight flex h-16 items-center justify-between gap-6 lg:h-20">
         <a href="#top" className="flex items-center gap-2.5">
-          <span className="grid h-10 w-10 place-items-center rounded-sm bg-primary text-primary-foreground font-extrabold">ТБ</span>
+          <img
+            src={logoTB}
+            alt="ТулБетон — логотип"
+            width={40}
+            height={40}
+            className="h-10 w-10 object-contain"
+          />
           <span className="hidden sm:flex flex-col leading-none">
             <span className="font-extrabold tracking-tight">ТулБетон</span>
             <span className="text-xs text-muted-foreground">Бетон и ЖБИ в Туле</span>
