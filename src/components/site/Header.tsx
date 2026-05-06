@@ -50,9 +50,7 @@ export const Header = () => {
         </nav>
 
         <div className="flex items-center gap-3">
-          <div className="hidden md:flex">
-            <MessengerLinks variant="icon" />
-          </div>
+          <MessengerLinks variant="icon" />
           <a
             href="tel:+77777777777"
             className="flex items-center gap-1.5 font-bold text-foreground hover:text-accent transition-colors"
