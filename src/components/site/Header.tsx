@@ -85,6 +85,9 @@ export const Header = () => {
             <a href="tel:+77777777777" className="rounded-md px-3 py-3 text-base font-bold text-accent">
               +7 777 777 77 77
             </a>
+            <div className="px-1 pt-2 pb-1">
+              <MessengerLinks variant="row" />
+            </div>
           </div>
         </div>
       )}
