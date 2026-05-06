@@ -96,7 +96,7 @@ export const ChatWidget = () => {
         copy[copy.length - 1] = {
           role: "assistant",
           content:
-            "Не удалось подключиться. Позвоните +7 903 301 73 83 или напишите в Telegram — мы на связи.",
+            "Не удалось подключиться. Позвоните +7 903 301 73 83 — мы на связи.",
         };
         return copy;
       });

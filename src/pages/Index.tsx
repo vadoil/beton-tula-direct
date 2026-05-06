@@ -14,6 +14,7 @@ import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Footer } from "@/components/sections/Footer";
 import { ChatWidget } from "@/components/site/ChatWidget";
+import { SaleBanner } from "@/components/site/SaleBanner";
 
 const Index = () => {
   const ld = {
@@ -47,6 +48,7 @@ const Index = () => {
       <Footer />
       <MobileStickyBar />
       <ChatWidget />
+      <SaleBanner />
     </div>
   );
 };
