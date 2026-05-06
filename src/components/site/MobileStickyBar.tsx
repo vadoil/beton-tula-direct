@@ -4,7 +4,7 @@ export const MobileStickyBar = () => (
   <div className="lg:hidden fixed bottom-0 inset-x-0 z-50 border-t border-border bg-background/95 backdrop-blur shadow-card-hover">
     <div className="grid grid-cols-2 gap-2 p-2.5">
       <a
-        href="tel:+79033017383"
+        href="tel:+77777777777"
         className="flex items-center justify-center gap-2 h-14 rounded-md border border-border font-semibold text-sm"
         aria-label="Позвонить"
       >

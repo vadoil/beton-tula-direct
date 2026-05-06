@@ -65,7 +65,7 @@ export const ChatWidget = () => {
                 <Tag className="h-4 w-4" /> Купить сайт
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <a href="tel:+79033017383"><Phone className="h-4 w-4" /> +7 903 301 73 83</a>
+                <a href="tel:+77777777777"><Phone className="h-4 w-4" /> +7 777 777 77 77</a>
               </Button>
             </div>
           </div>
