@@ -11,6 +11,10 @@ import { ExternalLink, Phone, Loader2, CheckCircle2, Tag } from "lucide-react";
 import { toast } from "sonner";
 
 const STORAGE_KEY = "sale-banner-shown";
+export const SALE_BANNER_EVENT = "open-sale-banner";
+export const openSaleBanner = () => {
+  if (typeof window !== "undefined") window.dispatchEvent(new CustomEvent(SALE_BANNER_EVENT));
+};
 
 const phoneRegex = /^[+\d][\d\s()-]{6,20}$/;
 const schema = z.object({
@@ -28,12 +32,19 @@ export const SaleBanner = () => {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (sessionStorage.getItem(STORAGE_KEY)) return;
-    const t = setTimeout(() => {
-      setOpen(true);
-      sessionStorage.setItem(STORAGE_KEY, "1");
-    }, 1500);
-    return () => clearTimeout(t);
+    const handler = () => setOpen(true);
+    window.addEventListener(SALE_BANNER_EVENT, handler);
+    let t: number | undefined;
+    if (!sessionStorage.getItem(STORAGE_KEY)) {
+      t = window.setTimeout(() => {
+        setOpen(true);
+        sessionStorage.setItem(STORAGE_KEY, "1");
+      }, 1500);
+    }
+    return () => {
+      window.removeEventListener(SALE_BANNER_EVENT, handler);
+      if (t) clearTimeout(t);
+    };
   }, []);
 
   const onSubmit = async (_v: Values) => {
@@ -47,7 +58,23 @@ export const SaleBanner = () => {
   };
 
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
+    <>
+      {/* Постоянно видимая «бирка» — продаётся */}
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        aria-label="Сайт продаётся — открыть"
+        className="fixed left-3 bottom-24 lg:left-5 lg:bottom-5 z-[55] group inline-flex items-center gap-2 rounded-full bg-accent text-accent-foreground pl-3 pr-4 py-2 text-xs font-extrabold uppercase tracking-wider shadow-accent hover:scale-105 transition-transform"
+      >
+        <span className="relative flex h-2.5 w-2.5">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-foreground/60 opacity-75" />
+          <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-accent-foreground" />
+        </span>
+        <Tag className="h-3.5 w-3.5" />
+        Сайт продаётся
+      </button>
+
+      <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent className="max-w-lg max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <div className="inline-flex w-fit items-center gap-2 rounded-full bg-accent/15 px-3 py-1 text-xs font-bold uppercase tracking-wider text-accent mb-2">
@@ -121,6 +148,7 @@ export const SaleBanner = () => {
           </Button>
         </form>
       </DialogContent>
-    </Dialog>
+      </Dialog>
+    </>
   );
 };
