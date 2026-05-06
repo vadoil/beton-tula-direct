@@ -49,7 +49,7 @@ export const Calculator = () => (
               <div>
                 <h4 className="font-bold">Удобнее позвонить?</h4>
                 <p className="text-sm text-muted-foreground">
-                  Звоните напрямую: <a href="tel:+79033017383" className="font-bold text-foreground hover:text-accent">+7 903 301 73 83</a>
+                  Звоните напрямую: <a href="tel:+77777777777" className="font-bold text-foreground hover:text-accent">+7 777 777 77 77</a>
                 </p>
               </div>
             </li>
