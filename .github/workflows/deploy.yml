@@ -11,7 +11,7 @@ concurrency:
 
 env:
   DEPLOY_ROOT: /var/www/tulbeton
-  HEALTHCHECK_URL: https://xn--h1aagca8acci.xn--p1ai/
+  HEALTHCHECK_URL: https://xn----8sbbq5akg5adk.xn--p1ai/
   KEEP_RELEASES: 5
 
 jobs:

@@ -1,7 +1,7 @@
 # Деплой ТулБетон на VPS
 
-- **Домен фронта:** бетон-тула.рф (punycode: `xn--h1aagca8acci.xn--p1ai`)
-- **Домен API:** api.бетон-тула.рф (punycode: `api.xn--h1aagca8acci.xn--p1ai`)
+- **Домен фронта:** бетон-тула.рф (punycode: `xn----8sbbq5akg5adk.xn--p1ai`)
+- **Домен API:** api.бетон-тула.рф (punycode: `api.xn----8sbbq5akg5adk.xn--p1ai`)
 - **Имя проекта на сервере:** `tulbeton` → `/var/www/tulbeton`
 - **Backend (Lovable Cloud):** `yrupuuxauttnqowabosf.supabase.co`
 
@@ -57,7 +57,7 @@ exit
 | `www.бетон-тула.рф` | A | `IP_СЕРВЕРА` |
 | `api.бетон-тула.рф` | A | `IP_СЕРВЕРА` |
 
-Дождитесь распространения (`dig +short xn--h1aagca8acci.xn--p1ai` должен вернуть ваш IP).
+Дождитесь распространения (`dig +short xn----8sbbq5akg5adk.xn--p1ai` должен вернуть ваш IP).
 
 ## 5. nginx-конфиги
 
@@ -84,9 +84,9 @@ sudo systemctl reload nginx
 
 ```bash
 sudo certbot --nginx \
-  -d xn--h1aagca8acci.xn--p1ai \
-  -d www.xn--h1aagca8acci.xn--p1ai \
-  -d api.xn--h1aagca8acci.xn--p1ai
+  -d xn----8sbbq5akg5adk.xn--p1ai \
+  -d www.xn----8sbbq5akg5adk.xn--p1ai \
+  -d api.xn----8sbbq5akg5adk.xn--p1ai
 ```
 
 Certbot допишет блоки `listen 443 ssl` и пути к сертификатам в оба конфига.
@@ -101,7 +101,7 @@ Certbot допишет блоки `listen 443 ssl` и пути к сертифи
 | `VPS_HOST` | IP сервера |
 | `VPS_USER` | `deploy` |
 | `VPS_SSH_KEY` | приватный ключ из шага 3 целиком, включая `-----BEGIN/END-----` |
-| `VITE_SUPABASE_URL` | `https://api.xn--h1aagca8acci.xn--p1ai` |
+| `VITE_SUPABASE_URL` | `https://api.xn----8sbbq5akg5adk.xn--p1ai` |
 | `VITE_SUPABASE_PUBLISHABLE_KEY` | значение из `.env` Lovable |
 | `VITE_SUPABASE_PROJECT_ID` | `yrupuuxauttnqowabosf` |
 
@@ -137,15 +137,15 @@ sudo systemctl reload nginx
 
 ```bash
 # Фронт
-curl -I https://xn--h1aagca8acci.xn--p1ai/
-curl -I https://xn--h1aagca8acci.xn--p1ai/assets/index-*.js   # max-age=31536000, immutable
+curl -I https://xn----8sbbq5akg5adk.xn--p1ai/
+curl -I https://xn----8sbbq5akg5adk.xn--p1ai/assets/index-*.js   # max-age=31536000, immutable
 
 # API-прокси
-curl -i "https://api.xn--h1aagca8acci.xn--p1ai/rest/v1/" \
+curl -i "https://api.xn----8sbbq5akg5adk.xn--p1ai/rest/v1/" \
   -H "apikey: $VITE_SUPABASE_PUBLISHABLE_KEY"
 
 # Edge Function (chat)
-curl -i "https://api.xn--h1aagca8acci.xn--p1ai/functions/v1/chat" \
+curl -i "https://api.xn----8sbbq5akg5adk.xn--p1ai/functions/v1/chat" \
   -X POST -H "Content-Type: application/json" \
   -H "apikey: $VITE_SUPABASE_PUBLISHABLE_KEY" \
   -H "Authorization: Bearer $VITE_SUPABASE_PUBLISHABLE_KEY" \
@@ -163,4 +163,4 @@ curl -i "https://api.xn--h1aagca8acci.xn--p1ai/functions/v1/chat" \
 | CORS-ошибка | домен фронта не совпадает с `$cors_origin` в api.conf |
 | `nginx: [emerg] duplicate listen options for [::]:443` | у соседнего сайта уже `listen 443 ssl http2` — уберите `http2` либо у нас, либо у них |
 | GHA: `Permission denied (publickey)` | публичный ключ не в `authorized_keys` пользователя `deploy` |
-| certbot ругается на кириллический домен | передавайте ему **punycode**: `xn--h1aagca8acci.xn--p1ai` |
+| certbot ругается на кириллический домен | передавайте ему **punycode**: `xn----8sbbq5akg5adk.xn--p1ai` |
