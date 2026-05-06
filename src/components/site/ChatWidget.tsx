@@ -47,7 +47,7 @@ export const ChatWidget = () => {
           {/* Sale notice */}
           <div className="p-5 bg-surface space-y-4">
             <div className="rounded-lg border border-border bg-background p-4 text-sm leading-relaxed">
-              Это <strong>AI-консультант</strong> для бетонного бизнеса — отвечает на вопросы клиентов, считает объёмы, помогает оформить заявку.
+              Это <strong>AI-консультант</strong> для расчета бетона и ЖБИ в городе Тула
               <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-accent/15 px-3 py-1 text-xs font-bold uppercase tracking-wider text-accent">
                 <Tag className="h-3.5 w-3.5" /> Сейчас он отключён
               </div>
