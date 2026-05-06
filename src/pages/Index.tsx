@@ -14,6 +14,7 @@ import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Footer } from "@/components/sections/Footer";
 import { ChatWidget } from "@/components/site/ChatWidget";
+import { SaleBanner } from "@/components/site/SaleBanner";
 
 const Index = () => {
   const ld = {
@@ -21,7 +22,7 @@ const Index = () => {
     "@type": "LocalBusiness",
     name: "ТулБетон — бетон и ЖБИ в Туле",
     description: "Производство и доставка бетона и ЖБИ в Туле и Тульской области.",
-    telephone: "+7 910 160 03 33",
+    telephone: "+7 903 301 73 83",
     address: { "@type": "PostalAddress", addressLocality: "Тула", addressRegion: "Тульская область", streetAddress: "ул. Промышленная, 1", addressCountry: "RU" },
     areaServed: "Тульская область",
     openingHours: "Mo-Sa 08:00-20:00",
@@ -47,6 +48,7 @@ const Index = () => {
       <Footer />
       <MobileStickyBar />
       <ChatWidget />
+      <SaleBanner />
     </div>
   );
 };

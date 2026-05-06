@@ -96,7 +96,7 @@ export const ChatWidget = () => {
         copy[copy.length - 1] = {
           role: "assistant",
           content:
-            "Не удалось подключиться. Позвоните +7 910 160 03 33 или напишите в Telegram — мы на связи.",
+            "Не удалось подключиться. Позвоните +7 903 301 73 83 — мы на связи.",
         };
         return copy;
       });
@@ -192,7 +192,7 @@ export const ChatWidget = () => {
               <a href="#calculator" onClick={() => setOpen(false)}>Оставить заявку</a>
             </Button>
             <Button variant="outline" size="sm" asChild>
-              <a href="tel:+79101600333">Позвонить</a>
+              <a href="tel:+79033017383">Позвонить</a>
             </Button>
           </div>
 

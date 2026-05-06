@@ -1,7 +1,6 @@
 import textureImg from "@/assets/concrete-texture.jpg";
 import { QuoteForm } from "@/components/site/QuoteForm";
 import { Phone, Clock } from "lucide-react";
-import { MessengerLinks } from "@/components/site/MessengerLinks";
 
 export const FinalCta = () => (
   <section className="relative overflow-hidden bg-primary text-white py-20 lg:py-28">
@@ -27,18 +26,13 @@ export const FinalCta = () => (
               <div className="text-xs text-white/60">в рабочие часы</div>
             </div>
           </div>
-          <a href="tel:+79101600333" className="flex items-center gap-3 rounded-lg border border-white/15 bg-white/5 p-4 hover:bg-white/10 transition-colors">
+          <a href="tel:+79033017383" className="flex items-center gap-3 rounded-lg border border-white/15 bg-white/5 p-4 hover:bg-white/10 transition-colors">
             <Phone className="h-6 w-6 text-accent" />
             <div>
-              <div className="font-bold tabular-nums">+7 910 160 03 33</div>
+              <div className="font-bold tabular-nums">+7 903 301 73 83</div>
               <div className="text-xs text-white/60">пн–сб с 8:00 до 20:00</div>
             </div>
           </a>
-        </div>
-
-        <div className="mt-6">
-          <div className="text-xs uppercase tracking-wider text-white/60 mb-3">Или напишите в мессенджер</div>
-          <MessengerLinks variant="pill" />
         </div>
       </div>
 

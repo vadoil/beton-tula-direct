@@ -44,7 +44,7 @@ export const Fleet = () => (
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <Button variant="cta" size="lg" asChild><a href="#calculator">Заказать доставку</a></Button>
-          <Button variant="onDark" size="lg" asChild><a href="tel:+79101600333">Позвонить диспетчеру</a></Button>
+          <Button variant="onDark" size="lg" asChild><a href="tel:+79033017383">Позвонить диспетчеру</a></Button>
         </div>
       </div>
 
