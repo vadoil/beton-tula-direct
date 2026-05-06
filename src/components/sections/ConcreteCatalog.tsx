@@ -23,7 +23,7 @@ export const ConcreteCatalog = () => {
   const visible = filter ? PRODUCTS.filter((p) => p.grades.includes(filter)) : PRODUCTS;
 
   return (
-    <section id="concrete" className="py-20 lg:py-28">
+    <section id="concrete" className="py-12 lg:py-16">
       <div className="container-tight">
         <div className="mb-12 grid gap-6 overflow-hidden rounded-lg border border-border bg-surface lg:grid-cols-[1.1fr_1fr]">
           <div className="relative aspect-[4/3] lg:aspect-auto">

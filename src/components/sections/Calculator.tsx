@@ -3,7 +3,7 @@ import { QuizForm } from "@/components/site/QuizForm";
 import { Clock, Phone, ShieldCheck, ListChecks, Gift, Percent } from "lucide-react";
 
 export const Calculator = () => (
-  <section id="calculator" className="py-20 lg:py-28">
+  <section id="calculator" className="py-12 lg:py-16">
     <div className="container-tight">
       {/* Заголовок и описание — на всю ширину сверху */}
       <div className="max-w-4xl">

@@ -4,7 +4,7 @@ import { Phone, Clock } from "lucide-react";
 import { MessengerLinks } from "@/components/site/MessengerLinks";
 
 export const FinalCta = () => (
-  <section className="relative overflow-hidden bg-primary text-white py-20 lg:py-28">
+  <section className="relative overflow-hidden bg-primary text-white py-12 lg:py-16">
     <img src={textureImg} alt="" loading="lazy" width={1600} height={900} aria-hidden
       className="absolute inset-0 h-full w-full object-cover opacity-[0.08] mix-blend-screen" />
     <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-accent/20 blur-3xl" />

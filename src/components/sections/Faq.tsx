@@ -12,7 +12,7 @@ const FAQS = [
 ];
 
 export const Faq = () => (
-  <section id="faq" className="bg-surface py-20 lg:py-28">
+  <section id="faq" className="bg-surface py-12 lg:py-16">
     <div className="container-tight grid gap-10 lg:grid-cols-[1fr_1.5fr] lg:gap-16">
       <SectionHeading
         label="Частые вопросы"
