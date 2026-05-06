@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { OrderDialog } from "@/components/site/OrderDialog";
 import { ArrowRight, Check, Calculator } from "lucide-react";
-import concretePour from "@/assets/concrete-pour.jpg";
+import concretePour from "@/assets/concrete-catalog-banner.png";
 
 const GRADES = ["М100", "М150", "М200", "М250", "М300", "М350", "М400", "М450", "М500", "М600"];
 
