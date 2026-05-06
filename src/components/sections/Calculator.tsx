@@ -13,18 +13,11 @@ export const Calculator = () => (
           description="Ответьте на 5–7 простых вопросов о вашем объекте — менеджер за 15 минут подготовит точный расчёт с лучшей ценой и подскажет, какую марку бетона или ЖБИ выбрать. Без звонков-навязок и обязательств."
         />
 
-        <div className="mt-6 flex flex-wrap gap-2">
-            <span className="inline-flex items-center gap-1.5 rounded-sm bg-accent px-3 py-1.5 text-xs font-extrabold uppercase tracking-wider text-accent-foreground">
-              <Percent className="h-3.5 w-3.5" /> Скидка до 7%
-            </span>
-            <span className="inline-flex items-center gap-1.5 rounded-sm border border-border bg-surface px-3 py-1.5 text-xs font-extrabold uppercase tracking-wider">
-              <Gift className="h-3.5 w-3.5 text-accent" /> Бонус: подбор марки
-            </span>
-        </div>
       </div>
 
       {/* Боки слева, квиз справа */}
       <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:gap-12 items-start">
+        <div>
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
           <li className="flex gap-3">
             <span className="grid h-10 w-10 shrink-0 place-items-center rounded-sm bg-accent text-accent-foreground"><ListChecks className="h-5 w-5" /></span>
@@ -57,6 +50,16 @@ export const Calculator = () => (
             </div>
           </li>
         </ul>
+
+        <div className="mt-6 flex flex-wrap gap-2">
+          <span className="inline-flex items-center gap-1.5 rounded-sm bg-accent px-3 py-1.5 text-xs font-extrabold uppercase tracking-wider text-accent-foreground">
+            <Percent className="h-3.5 w-3.5" /> Скидка до 7%
+          </span>
+          <span className="inline-flex items-center gap-1.5 rounded-sm border border-border bg-surface px-3 py-1.5 text-xs font-extrabold uppercase tracking-wider">
+            <Gift className="h-3.5 w-3.5 text-accent" /> Бонус: подбор марки
+          </span>
+        </div>
+        </div>
 
         <QuizForm />
       </div>
