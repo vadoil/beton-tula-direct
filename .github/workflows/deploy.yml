@@ -1,0 +1,92 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-vps
+  cancel-in-progress: true
+
+env:
+  DEPLOY_ROOT: /var/www/tulbeton
+  HEALTHCHECK_URL: https://xn--h1aagca8acci.xn--p1ai/
+  KEEP_RELEASES: 5
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
+          VITE_SUPABASE_PROJECT_ID: ${{ secrets.VITE_SUPABASE_PROJECT_ID }}
+        run: npm run build
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Compute release name
+        id: rel
+        run: |
+          TS=$(date -u +%Y%m%d-%H%M%S)
+          SHA=${GITHUB_SHA::7}
+          echo "name=release-${TS}-${SHA}" >> $GITHUB_OUTPUT
+
+      - name: Upload release via rsync
+        run: |
+          REL="${{ steps.rel.outputs.name }}"
+          ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "mkdir -p ${DEPLOY_ROOT}/releases/${REL}"
+          rsync -az --delete \
+            -e "ssh -o StrictHostKeyChecking=accept-new" \
+            dist/ \
+            ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:${DEPLOY_ROOT}/releases/${REL}/
+
+      - name: Activate release (atomic symlink swap + reload nginx)
+        run: |
+          REL="${{ steps.rel.outputs.name }}"
+          ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} bash -s <<EOF
+            set -euo pipefail
+            cd ${DEPLOY_ROOT}
+            ln -sfn releases/${REL} current.new
+            mv -Tf current.new current
+            sudo /usr/sbin/nginx -t
+            sudo /bin/systemctl reload nginx
+            # Cleanup: оставить последние ${KEEP_RELEASES} релизов
+            cd releases
+            ls -1t | tail -n +$((${KEEP_RELEASES} + 1)) | xargs -r rm -rf
+          EOF
+
+      - name: Healthcheck
+        run: |
+          for i in 1 2 3 4 5; do
+            CODE=$(curl -s -o /dev/null -w "%{http_code}" -L "${HEALTHCHECK_URL}" || echo "000")
+            echo "Attempt $i: HTTP $CODE"
+            if [ "$CODE" = "200" ]; then
+              echo "OK"
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "Healthcheck failed"
+          exit 1
