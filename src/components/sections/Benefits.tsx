@@ -13,7 +13,7 @@ const ITEMS = [
 ];
 
 export const Benefits = () => (
-  <section id="benefits" className="bg-surface py-20 lg:py-28">
+  <section id="benefits" className="bg-surface py-12 lg:py-16">
     <div className="container-tight">
       <SectionHeading
         label="Почему выбирают нас"

@@ -12,7 +12,7 @@ const STEPS = [
 ];
 
 export const Delivery = () => (
-  <section id="delivery" className="py-20 lg:py-28">
+  <section id="delivery" className="py-12 lg:py-16">
     <div className="container-tight">
       <SectionHeading
         label="Доставка"

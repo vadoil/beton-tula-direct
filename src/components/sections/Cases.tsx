@@ -14,7 +14,7 @@ const CASES = [
 ];
 
 export const Cases = () => (
-  <section id="cases" className="py-20 lg:py-28">
+  <section id="cases" className="py-12 lg:py-16">
     <div className="container-tight">
       <SectionHeading
         label="Наши объекты"

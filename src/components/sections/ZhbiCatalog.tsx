@@ -32,7 +32,7 @@ const ITEMS = [
 ];
 
 export const ZhbiCatalog = () => (
-  <section id="zhbi" className="relative bg-primary text-white py-20 lg:py-28 overflow-hidden">
+  <section id="zhbi" className="relative bg-primary text-white py-12 lg:py-16 overflow-hidden">
     <img src={zhbiImg} alt="Склад железобетонных изделий" loading="lazy" width={1600} height={1000}
       className="absolute inset-0 h-full w-full object-cover opacity-15" />
     <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary/95 to-primary" />

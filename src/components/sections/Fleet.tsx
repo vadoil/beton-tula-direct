@@ -10,7 +10,7 @@ const SPECS = [
 ];
 
 export const Fleet = () => (
-  <section id="fleet" className="relative overflow-hidden bg-primary text-white py-20 lg:py-28">
+  <section id="fleet" className="relative overflow-hidden bg-primary text-white py-12 lg:py-16">
     <img src={fleetImg} alt="Автопарк бетоновозов на бетонном заводе" loading="lazy" width={1280} height={896}
       className="absolute inset-0 h-full w-full object-cover opacity-30" />
     <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-primary/40" />

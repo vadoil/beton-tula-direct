@@ -13,7 +13,7 @@ const TASKS = [
 ];
 
 export const MaterialSelector = () => (
-  <section id="selector" className="bg-surface py-20 lg:py-28">
+  <section id="selector" className="bg-surface py-12 lg:py-16">
     <div className="container-tight">
       <SectionHeading
         label="Подбор материала"

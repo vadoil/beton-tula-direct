@@ -12,7 +12,7 @@ const ITEMS = [
 ];
 
 export const Trust = () => (
-  <section className="bg-surface py-20 lg:py-28">
+  <section className="bg-surface py-12 lg:py-16">
     <div className="container-tight">
       <SectionHeading
         label="Почему нам доверяют"
