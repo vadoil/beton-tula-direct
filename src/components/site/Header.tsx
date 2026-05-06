@@ -30,7 +30,7 @@ export const Header = () => {
         <a href="#top" className="flex items-center gap-2.5">
           <img
             src={logoTB}
-            alt="ТулаБетон — логотип"
+            alt="ТулаБетон – логотип"
             width={40}
             height={40}
             className="h-10 w-10 object-contain"

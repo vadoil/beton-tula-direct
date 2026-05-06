@@ -26,7 +26,7 @@ type Answers = {
   comment?: string;
 };
 
-const CONCRETE_TASKS = ["Фундамент", "Стяжка / пол", "Монолит / стены", "Перекрытие", "Дорога / площадка", "Не знаю — подскажите"];
+const CONCRETE_TASKS = ["Фундамент", "Стяжка / пол", "Монолит / стены", "Перекрытие", "Дорога / площадка", "Не знаю – подскажите"];
 const CONCRETE_GRADES = ["М200", "М250", "М300", "М350", "М400", "Подберите сами"];
 const CONCRETE_VOLUMES = ["до 5 м³", "5–20 м³", "20–50 м³", "50–100 м³", "100+ м³"];
 const PUMP = ["Не нужен", "Нужен бетононасос", "Уточнить"];
@@ -93,7 +93,7 @@ export const QuizForm = () => {
   const submit = async () => {
     if (!canNext) return;
     setSubmitting(true);
-    // Имитация отправки — менеджер перезвонит
+    // Имитация отправки – менеджер перезвонит
     await new Promise((r) => setTimeout(r, 700));
     setSubmitting(false);
     setDone(true);
@@ -154,12 +154,12 @@ export const QuizForm = () => {
       {/* Step content */}
       <div className="min-h-[260px]">
         {current === "branch" && (
-          <Step title="Что вам нужно?" subtitle="Выберите направление — дальше уточним детали.">
+          <Step title="Что вам нужно?" subtitle="Выберите направление – дальше уточним детали.">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <BigOption
                 icon={Truck}
                 title="Бетон с доставкой"
-                desc="Товарный бетон, раствор, пескобетон — миксером"
+                desc="Товарный бетон, раствор, пескобетон – миксером"
                 selected={answers.branch === "concrete"}
                 onClick={() => choose("branch", "concrete")}
               />
@@ -180,12 +180,12 @@ export const QuizForm = () => {
           </Step>
         )}
         {current === "grade" && (
-          <Step title="Какая марка?" subtitle="Если не уверены — выберите «Подберите сами».">
+          <Step title="Какая марка?" subtitle="Если не уверены – выберите «Подберите сами».">
             <Pills options={CONCRETE_GRADES} value={answers.grade} onSelect={(v) => choose("grade", v)} />
           </Step>
         )}
         {current === "volume" && (
-          <Step title="Какой объём?" subtitle="Можно ориентировочно — уточним по телефону.">
+          <Step title="Какой объём?" subtitle="Можно ориентировочно – уточним по телефону.">
             <Pills options={CONCRETE_VOLUMES} value={answers.volume} onSelect={(v) => choose("volume", v)} />
           </Step>
         )}
@@ -196,7 +196,7 @@ export const QuizForm = () => {
         )}
 
         {current === "category" && (
-          <Step title="Какое изделие нужно?" subtitle="Если несколько — выберите основное, остальное уточним.">
+          <Step title="Какое изделие нужно?" subtitle="Если несколько – выберите основное, остальное уточним.">
             <Pills options={ZHBI_CATEGORIES} value={answers.category} onSelect={(v) => choose("category", v)} />
           </Step>
         )}

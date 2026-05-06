@@ -5,12 +5,12 @@ import { Clock, Phone, ShieldCheck, ListChecks, Gift, Percent } from "lucide-rea
 export const Calculator = () => (
   <section id="calculator" className="py-12 lg:py-16">
     <div className="container-tight">
-      {/* Заголовок и описание — на всю ширину сверху */}
+      {/* Заголовок и описание – на всю ширину сверху */}
       <div className="max-w-4xl">
         <SectionHeading
           label="Расчёт за 2 минуты"
-          title="Пройдите короткий опрос — получите скидку до 7% и подбор марки от инженера"
-          description="Ответьте на 5–7 простых вопросов о вашем объекте — менеджер за 15 минут подготовит точный расчёт с лучшей ценой и подскажет, какую марку бетона или ЖБИ выбрать. Без звонков-навязок и обязательств."
+          title="Пройдите короткий опрос – получите скидку до 7% и подбор марки от инженера"
+          description="Ответьте на 5–7 простых вопросов о вашем объекте – менеджер за 15 минут подготовит точный расчёт с лучшей ценой и подскажет, какую марку бетона или ЖБИ выбрать. Без звонков-навязок и обязательств."
         />
 
       </div>
@@ -22,7 +22,7 @@ export const Calculator = () => (
           <li className="flex gap-3">
             <span className="grid h-10 w-10 shrink-0 place-items-center rounded-sm bg-accent text-accent-foreground"><ListChecks className="h-5 w-5" /></span>
             <div>
-              <h4 className="font-bold">Всего 5–7 вопросов — 2 минуты</h4>
+              <h4 className="font-bold">Всего 5–7 вопросов – 2 минуты</h4>
               <p className="text-sm text-muted-foreground">Без длинных форм. Только то, что нужно для точного расчёта.</p>
             </div>
           </li>
@@ -37,7 +37,7 @@ export const Calculator = () => (
             <span className="grid h-10 w-10 shrink-0 place-items-center rounded-sm bg-accent text-accent-foreground"><ShieldCheck className="h-5 w-5" /></span>
             <div>
               <h4 className="font-bold">Цена зафиксирована в договоре</h4>
-              <p className="text-sm text-muted-foreground">Никаких доплат «по факту». Объём, срок и состав — прозрачно.</p>
+              <p className="text-sm text-muted-foreground">Никаких доплат «по факту». Объём, срок и состав – прозрачно.</p>
             </div>
           </li>
           <li className="flex gap-3">
