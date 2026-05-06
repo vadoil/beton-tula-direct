@@ -7,7 +7,7 @@ export const Footer = () => (
       <div>
         <div className="flex items-center gap-2.5">
           <span className="grid h-10 w-10 place-items-center rounded-sm bg-accent text-accent-foreground font-extrabold">ТБ</span>
-          <span className="font-extrabold text-lg">ТулБетон</span>
+          <span className="font-extrabold text-lg">ТулаБетон</span>
         </div>
         <p className="mt-4 text-sm text-white/65 leading-relaxed">
           Производство и доставка бетона и ЖБИ в Туле и Тульской области. Работаем с частными и коммерческими объектами.
@@ -71,7 +71,7 @@ export const Footer = () => (
     </div>
 
     <div className="container-tight mt-12 border-t border-white/10 pt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between text-xs text-white/50">
-      <span>© {new Date().getFullYear()} ТулБетон. Бетон и ЖБИ с доставкой по Туле.</span>
+      <span>© {new Date().getFullYear()} ТулаБетон. Бетон и ЖБИ с доставкой по Туле.</span>
       <span>Не является публичной офертой. Цены уточняйте у менеджера.</span>
     </div>
   </footer>

@@ -20,7 +20,7 @@ const Index = () => {
   const ld = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "ТулБетон — бетон и ЖБИ в Туле",
+    name: "ТулаБетон — бетон и ЖБИ в Туле",
     description: "Производство и доставка бетона и ЖБИ в Туле и Тульской области.",
     telephone: "+7 777 777 77 77",
     address: { "@type": "PostalAddress", addressLocality: "Тула", addressRegion: "Тульская область", streetAddress: "ул. Промышленная, 1", addressCountry: "RU" },
