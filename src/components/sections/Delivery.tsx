@@ -67,7 +67,7 @@ export const Delivery = () => (
         <p className="text-white/85"><strong className="text-white">Нужна доставка сегодня?</strong> Позвоните — проверим слоты и посчитаем стоимость.</p>
         <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
           <Button variant="cta" size="lg" asChild><a href="#calculator">Оставить заявку</a></Button>
-          <Button variant="onDark" size="lg" asChild><a href="tel:+79101600333">Позвонить</a></Button>
+          <Button variant="onDark" size="lg" asChild><a href="tel:+79033017383">Позвонить</a></Button>
         </div>
       </div>
     </div>
